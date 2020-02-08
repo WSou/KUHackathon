@@ -1,44 +1,28 @@
 #include <iostream>
 #include <string>
+#include "mapClass.hpp"
 using namespace std;
 
-void map();
+//creating Map
+
+bool locationStatus[10][10];
+double money;
 
 
 int main()
 {
 
-//creating Map
-double money;
-string stringArray[10][10];
+  layout map;
+  map.mapGen();
+  map.mapDraw();
+  return 0;
 
- string word;
+/*
+  string stringArray[10][10];
+
+  string word;
   word = "Empty space ";
 
-  for (int i = 0; i < 10; i++)
-  for (int j = 0; j < 10; j++)
-  {
-      stringArray[i][j] = string(word);
-      
-  }
-
-//condition
-stringArray [2][2] = "Bad spot", money = -100;
-stringArray [1][2] = "Bad spot", money = -50;
-stringArray [2][5] = "Bad spot", money = -60;
-stringArray [2][6] = "Bad spot", money = -20;
-stringArray [7][2] = "Bad spot", money = -20;
-stringArray [2][3] = "Bad spot", money = -40;
-stringArray [6][2] = "Bad spot", money = -50;
-stringArray [2][2] = "Bad spot", money = -20;
-cout << stringArray [2][2];
-
-  for (int i = 0; i < 10; i++)
-  for (int j = 0; j < 10; j++)
-  {
-   cout << stringArray[i][j];
-      
-  }
 cout << "Testing",  cout <<money;
 money = 1000;
 
@@ -109,4 +93,5 @@ cout <<endl <<endl;
 cout << endl <<endl;
 
   return 0;
+  */
 }
