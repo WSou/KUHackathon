@@ -4,8 +4,6 @@
 using namespace std;
 
 //creating Map
-
-bool locationStatus[10][10];
 double money;
 
 
