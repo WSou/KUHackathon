@@ -41,38 +41,38 @@ cout << "[4] Harambe" <<endl;
 cout << "Type in the number for your character:  ";
 
 int chooseChar;
-int luck;
 cin >> chooseChar;
 
 switch(chooseChar)
 {
 case 1 :
   userName = "Karen";
-  stats = "after a long day of talking to managers and driving her kids around she sits down\n"
-  "with her mom friends at book club and drinks lots and LOTS of wine\n" ;
+  stats = "After a long day of talking to managers and driving her kids around she sits down\n"
+  "with her mom friends at book club and drinks lots and LOTS of wine\n" 
+  "Fight with manager = 10"
+  "Driving sill = 2";
   break;
 case 2 :
   userName = "Derp";
-  luck  = 3;
   stats = "The master who started all the memes\n"
-  "Killing power = 2\n"
-  "Sipping tea = 10\n"
-  "Singing Power = 5\n";
+  "Making meme = 9\n"
+  "Making your Day = 10\n"
+  "Sunshine Power = 7\n";
   break;
   case 3 :
   userName = "Evil Kermit";
   stats = "Lovable green frog of the Muppets gang; Is also a pretty sick nasty pirate. \n"
-  "Killing power = 2\n"
-  "Sipping tea = 10\n"
-  "Singing power = 5\n";
+  "Killing power = 4\n"
+  "Sipping tea = 9\n"
+  "Hi-Ho Power = 10\n";
   break;
   case 4 :
   userName = "Harambe";
   stats = "The glue that help the world together. The one and only gorilla that could solve\n"
   "everything but was brutally murdered in cold blood because someone couldn't control their kid. \n"
-  "Killing power = 2\n"
-  "Sipping tea = 10\n"
-  "Singing ower = 5\n";
+  "Luck = 2\n"
+  "Tree climbing = 10\n"
+  "Respect = 10\n";
   break;
 default:
 cout <<"Please don't break me :( I'm a noob on this\n";
