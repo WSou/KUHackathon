@@ -18,7 +18,7 @@ void layout::mapGen()
 
 int layout::mapInfo(int xCoord, int yCoord)
 {
-
+  return tileState[xCoord][yCoord];
 }
 
 void layout::mapDraw()
