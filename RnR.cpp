@@ -15,10 +15,10 @@ if (){
     Condition = "It's Tax time!"
     switch(money)
     {
-        case money <= 10000: 
+        case money <= 10000:
         money = money * 0.9;
         break;
-        case money > 10000 && Money <= 20000: 
+        case money > 10000 && Money <= 20000:
         money = money * 0.85;
         break;
         case money > 20000 && Money <= 30000:
@@ -39,11 +39,11 @@ if (){
     double Earn = 5000;
     switch(money)
     {
-        case money <= 10000: 
+        case money <= 10000:
         Earn = Earn * .9;
         money = money + Earn;
         break;
-        case money > 10000 && Money <= 20000: 
+        case money > 10000 && Money <= 20000:
         Earn = Earn * .85;
         money = money + Earn;
         break;
@@ -61,7 +61,7 @@ if (){
         break;
     }
     condition = "Work at a minimum wage job. You have earned 5000! But due to income taxes"
-    "You now earned" <<Earn;
+    "You now earned" << Earn;
 }
 
 // Risk and Reward

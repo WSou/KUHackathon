@@ -50,3 +50,8 @@ void layout::mapDraw()
     }
   }
 }
+
+std::string layout::locationReturn(int xCoord, int yCoord)
+{
+  return ;
+}
