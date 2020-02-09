@@ -57,6 +57,7 @@ int main(int argc, char *argv[])
   dpad[1]->setGeometry(975,473,50,20);
   dpad[2]->setGeometry(935,515,20,50);
   dpad[3]->setGeometry(865,473,50,20);
+
   /*
   QLabel *label = new QLabel;
   QObject::connect(dpad[0], SIGNAL (released(dpad[0])),label, SLOT(std::cout << "Hi" << std::endl));
