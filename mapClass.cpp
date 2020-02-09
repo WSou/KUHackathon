@@ -11,7 +11,7 @@ void layout::mapGen()
     for(int j = 0; j < 18; j++)
     {
       mapArray[i][j] = rand() % 100 + 1;
-      tileState[i][j] = rand() % 3;
+      tileState[i][j] = rand() % 8 + 1;
     }
   }
 }
@@ -29,15 +29,15 @@ void layout::mapDraw()
     for(int j = 0; j < 19; j++)
     {
       int x = tileState[i][j];
-      if (x == 0)
+      if (x < 5)
       {
         std::cout << "-";
       }
-      else if (x == 1)
+      else if (x >= 5 && x <=6)
       {
         std::cout << "+";
       }
-      else if (x == 2)
+      else if (x > 6)
       {
         std::cout << "x";
       }
