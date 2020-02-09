@@ -1,19 +1,59 @@
 #include <iostream>
 #include <string>
 #include "mapClass.hpp"
-using namespace std;
+#include "dialog.h"
+#include <QApplication>
+#include <QPushButton>
 
 //creating Map
-double money;
+//double money;
 
 
-int main()
+int main(int argc, char *argv[])
 {
-
+  QApplication a(argc, argv);
+  Dialog window;
   layout map;
-  map.mapGen();
+
+  window.setFixedSize(1260, 630);
+
+
+  int y = 5;
+  QPushButton *buttons[9][9];
+  QPushButton *dpad[4];
+
+  int x = 1;
+
+  for (int i = 0; i < 10; i++)
+  {
+      for(int k = 0; k < 10; k++)
+      {
+        if (k != y || i != y)
+        {
+         buttons[k][i] = new QPushButton("?", &window);
+         buttons[k][i]->setGeometry((5+70*(k-1)), (5+70*(i-1)), 60, 60);
+         x++;
+        }
+        else
+        {
+         buttons[k][i] = new QPushButton("-", &window);
+         buttons[k][i]->setGeometry((5+70*(k-1)), (5+70*(i-1)), 60, 60);
+        }
+      }
+  }
+
+  dpad[0] = new QPushButton("^", &window);
+
+  dpad[1] = new QPushButton(">", &window);
+  dpad[2] = new QPushButton("v", &window);
+  dpad[3] = new QPushButton("<", &window);
+  /*map.mapGen();
   map.mapDraw();
-  return 0;
+*/
+
+  window.show();
+  return a.exec();
+
 
 /*
   string stringArray[10][10];
@@ -48,7 +88,7 @@ switch(chooseChar)
 case 1 :
   userName = "Karen";
   stats = "After a long day of talking to managers and driving her kids around she sits down\n"
-  "with her mom friends at book club and drinks lots and LOTS of wine\n" 
+  "with her mom friends at book club and drinks lots and LOTS of wine\n"
   "Fight with manager = 10"
   "Driving sill = 2";
   break;
