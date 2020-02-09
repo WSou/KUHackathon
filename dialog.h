@@ -1,10 +1,9 @@
 #ifndef DIALOG_H
 #define DIALOG_H
 
-#include <QtWidgets/QDialog>
-#include <QtGui/QtGui>
-#include <QtCore/QtCore>
-#include <cmath>
+#include <QDialog>
+#include <QtGui>
+#include <QtCore>
 
 
 QT_BEGIN_NAMESPACE

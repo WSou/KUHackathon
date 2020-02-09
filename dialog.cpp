@@ -15,47 +15,23 @@ Dialog::~Dialog()
 
 void Dialog::paintEvent(QPaintEvent *e)
 {
+    //QRect rect1 = QRect(560,60,50,50);
     QPainter painter(this);
-    QPen pointpen(Qt::black);
-    pointpen.setWidth(6);
+    QPen pointpen(Qt::white);
+    pointpen.setWidth(5);
 
     QPen linepen(Qt::red);
-    linepen.setWidth(2);
+    linepen.setWidth(5);
 
     QPen rectpen(Qt::blue);
     rectpen.setWidth(5);
 
-    QPoint points[9];
-
-    painter.setPen(rectpen);
-    points[0].setX(10);
-    points[0].setY(10);
-
-    points[1].setX(100);
-    points[1].setY(100);
-
-    points[2].setX(200);
-    points[2].setY(100);
-
-    points[3].setX(150);
-    points[3].setY(100 - 50*sqrt(3));
-
-
     painter.setPen(linepen);
-  //  painter.drawLine(points[0],points[1]);
-    painter.drawLine(points[1],points[2]);
-    painter.drawLine(points[3],points[2]);
-    painter.drawLine(points[3],points[1]);
-
-    painter.setPen(pointpen);
-  //  painter.drawPoint(points[0]);
-    painter.drawPoint(points[1]);
-    painter.drawPoint(points[2]);
-    painter.drawPoint(points[3]);
-
-    painter.setPen(rectpen);
-    painter.drawRect(10, 10, 500, 500);
+    painter.drawRect(3, 3, 624, 624);
+    painter.drawRect(632,3,1277,624);
+    painter.fillRect(3, 3, 624, 624, Qt::white);
+    painter.fillRect(632,3,1277,624, Qt::black);
+    //painter.drawRect(rect1);
 
 
 }
-

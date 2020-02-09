@@ -1,12 +1,19 @@
 #include <iostream>
 #include <string>
-#include "mapClass.hpp"
-#include "dialog.h"
 #include <QApplication>
 #include <QPushButton>
-
+#include <QLabel>
+#include "mapClass.hpp"
+#include "dialog.h"
 //creating Map
 //double money;
+
+void buttonPress(int number);
+
+int xCoord, yCoord;
+QPushButton *buttons[9][9];
+QPushButton *dpad[4];
+
 
 
 int main(int argc, char *argv[])
@@ -19,8 +26,6 @@ int main(int argc, char *argv[])
 
 
   int y = 5;
-  QPushButton *buttons[9][9];
-  QPushButton *dpad[4];
 
   int x = 1;
 
@@ -38,15 +43,25 @@ int main(int argc, char *argv[])
         {
          buttons[k][i] = new QPushButton("-", &window);
          buttons[k][i]->setGeometry((5+70*(k-1)), (5+70*(i-1)), 60, 60);
+         xCoord = k, yCoord = i;
         }
       }
   }
 
   dpad[0] = new QPushButton("^", &window);
-
   dpad[1] = new QPushButton(">", &window);
   dpad[2] = new QPushButton("v", &window);
   dpad[3] = new QPushButton("<", &window);
+
+  dpad[0]->setGeometry(935,405,20,50);
+  dpad[1]->setGeometry(975,473,50,20);
+  dpad[2]->setGeometry(935,515,20,50);
+  dpad[3]->setGeometry(865,473,50,20);
+  /*
+  QLabel *label = new QLabel;
+  QObject::connect(dpad[0], SIGNAL (released(dpad[0])),label, SLOT(std::cout << "Hi" << std::endl));
+  */
+
   /*map.mapGen();
   map.mapDraw();
 */
